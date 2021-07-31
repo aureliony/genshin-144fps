@@ -1,10 +1,4 @@
-#define KEY_TOGGLE VK_END
-#define KEY_INCREASE VK_UP
-#define KEY_DECREASE VK_DOWN
 #define FPS_TARGET 144
-
-// do not touch anything below
-// unless you know what you're doing
 
 #ifdef WIN32
 #error You must build in x64
@@ -240,16 +234,6 @@ DWORD __stdcall Thread1(LPVOID p)
         std::this_thread::sleep_for(std::chrono::milliseconds(16));
         if (GetForegroundWindow() != hwnd)
             continue;
-        //if (GetAsyncKeyState(KEY_DECREASE) & 1)
-        //    fps -= 20;
-        //if (GetAsyncKeyState(KEY_INCREASE) & 1)
-        //    fps += 20;
-        //if (GetAsyncKeyState(KEY_TOGGLE) & 1)
-        //    fps = fps != 60 ? 60 : prev;
-        //if (fps > 60)
-        //    prev = fps;
-        //if (fps < 60)
-        //    fps = 60;
         printf("\rFPS: %d - %s    ", fps, fps > 60 ? "ON" : "OFF");
         *pTargetFPS = fps;
     }
