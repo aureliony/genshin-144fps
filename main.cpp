@@ -4,12 +4,14 @@
 #error You must build in x64
 #endif
 
-#include <Windows.h>
-#include <TlHelp32.h>
+#define _WIN32_WINNT 0x0601
+
+#include <windows.h>
+#include <tlhelp32.h>
 #include <vector>
 #include <string>
 #include <thread>
-#include <Psapi.h>
+#include <psapi.h>
 
 bool bStop = false;
 
