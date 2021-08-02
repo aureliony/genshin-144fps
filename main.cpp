@@ -9,8 +9,6 @@
 #include <thread>
 #include <psapi.h>
 
-bool bStop = false;
-
 // didnt made this pattern scan - c+p'd from somewhere
 uintptr_t PatternScan(void* module, const char* signature)
 {
@@ -265,7 +263,6 @@ int main(int argc, char** argv)
 			WriteProcessMemory(pi.hProcess, (LPVOID)pfps, &TargetFPS, sizeof(TargetFPS), nullptr);
 	}
 
-	bStop = true;
 	CloseHandle(pi.hProcess);
 	TerminateProcess((HANDLE)-1, 0);
 
