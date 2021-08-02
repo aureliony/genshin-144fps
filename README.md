@@ -7,7 +7,10 @@
  - Should work for future updates
 
  ## Compiling
- - Install x86_64-w64-mingw32-g++, run build.bat
+ - Install x86_64-w64-mingw32-g++
+ - Setup posix threads using `sudo update-alternatives --config x86_64-w64-mingw32-g++`
+ - Run build.bat
+ 
  ## Usage
  - Make sure you have the [Visual C++ 2019 Redistributable (x64)](https://aka.ms/vs/16/release/vc_redist.x64.exe) installed
  - If it is your first time running, run unlocker as admin, then the unlocker will ask you to open the game. This only need to be done once, it's used for acquiring the game path. Then it'll be saved to a config file. After the config is made you can start the game via the unlocker in future sessions.
