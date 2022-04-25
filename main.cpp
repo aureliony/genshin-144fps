@@ -79,8 +79,7 @@ bool GetModule(DWORD pid, std::string ModuleName, PMODULEENTRY32 pEntry)
         if (mod32.th32ProcessID != pid)
             continue;
 
-        if (mod32.szModule == ModuleName)
-        {
+        if (mod32.szModule == ModuleName) {
             *pEntry = mod32;
             break;
         }
